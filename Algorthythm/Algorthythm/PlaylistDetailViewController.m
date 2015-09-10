@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.buttonPressLabel.text = self.segueLabelText;
+    if (self.playlist) {
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

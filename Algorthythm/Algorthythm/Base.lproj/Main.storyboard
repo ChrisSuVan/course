@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jzd-1k-34u">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Playlist-->
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-No-J5d">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-No-J5d">
                                 <rect key="frame" x="60" y="184" width="200" height="200"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -34,7 +35,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Fta-3y-uFO" firstAttribute="top" secondItem="1xK-No-J5d" secondAttribute="bottom" constant="8" id="2ns-8g-sFs"/>
                             <constraint firstAttribute="centerY" secondItem="1xK-No-J5d" secondAttribute="centerY" id="Dek-Wx-saw"/>
@@ -43,6 +44,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlist" id="bXt-CV-6Ox"/>
+                    <connections>
+                        <outlet property="playListImageVeiw0" destination="1xK-No-J5d" id="28G-48-wwi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,23 +64,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't pressed the button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyb-eb-YYn">
-                                <rect key="frame" x="40.5" y="273.5" width="239.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lTB-0s-rKv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lTB-0s-rKv" secondAttribute="height" multiplier="32:29" id="s6u-zN-7WR"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GK1-lj-XJb">
+                                <rect key="frame" x="0.0" y="264" width="320" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Goes Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYq-c7-QcI">
+                                        <rect key="frame" x="20" y="10" width="119" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="No5-Q3-yOG">
+                                        <rect key="frame" x="20" y="39" width="280" height="43"/>
+                                        <string key="text">This is a collection of my favorite songs to listen to when working out. It's got everything from fast cardio to power workout tunes. All the right fuel to get your engine going.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="No5-Q3-yOG" firstAttribute="top" secondItem="gYq-c7-QcI" secondAttribute="bottom" constant="8" id="96c-Gj-SQN"/>
+                                    <constraint firstAttribute="trailing" secondItem="No5-Q3-yOG" secondAttribute="trailing" constant="20" id="HGE-se-kpB"/>
+                                    <constraint firstItem="gYq-c7-QcI" firstAttribute="top" secondItem="GK1-lj-XJb" secondAttribute="top" constant="10" id="LgD-9o-1bf"/>
+                                    <constraint firstAttribute="width" secondItem="GK1-lj-XJb" secondAttribute="height" multiplier="32:9" id="pfB-GD-L69"/>
+                                    <constraint firstItem="gYq-c7-QcI" firstAttribute="leading" secondItem="GK1-lj-XJb" secondAttribute="leading" constant="20" id="ttw-gK-Dhf"/>
+                                    <constraint firstItem="No5-Q3-yOG" firstAttribute="leading" secondItem="GK1-lj-XJb" secondAttribute="leading" constant="20" id="yaL-d7-Axx"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="vyb-eb-YYn" secondAttribute="centerY" id="7ak-Hr-Wxm"/>
-                            <constraint firstAttribute="centerX" secondItem="vyb-eb-YYn" secondAttribute="centerX" id="W2M-uY-kmx"/>
+                            <constraint firstItem="lTB-0s-rKv" firstAttribute="leading" secondItem="KI9-Ad-NB8" secondAttribute="leading" id="9WZ-xK-tM7"/>
+                            <constraint firstItem="GK1-lj-XJb" firstAttribute="bottom" secondItem="lTB-0s-rKv" secondAttribute="bottom" id="LLq-Yo-wLu"/>
+                            <constraint firstItem="lTB-0s-rKv" firstAttribute="top" secondItem="bPh-3A-81e" secondAttribute="bottom" id="Ljh-Bj-Ndb"/>
+                            <constraint firstAttribute="trailing" secondItem="lTB-0s-rKv" secondAttribute="trailing" id="VlW-er-NdF"/>
+                            <constraint firstAttribute="trailing" secondItem="GK1-lj-XJb" secondAttribute="trailing" id="j1D-FJ-id7"/>
+                            <constraint firstItem="GK1-lj-XJb" firstAttribute="leading" secondItem="KI9-Ad-NB8" secondAttribute="leading" id="nJD-eQ-cIQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artists" id="ppU-U7-Yfq"/>
-                    <connections>
-                        <outlet property="buttonPressLabel" destination="vyb-eb-YYn" id="Hqq-N2-cuV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evo-lz-vOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,9 +119,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jzd-1k-34u" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bsr-CA-VOt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Bsr-CA-VOt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -102,7 +136,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coffee" width="53" height="107"/>
+        <image name="placeholder" width="66" height="73"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
