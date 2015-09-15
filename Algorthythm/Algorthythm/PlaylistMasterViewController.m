@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.aButton setTitle:@"Press me!" forState:UIControlStateNormal];
     Playlist* playList = [[Playlist alloc]initWithIndex:0];
     self.playListImageVeiw0.image = playList.playlistIcon;
 }
@@ -35,4 +34,7 @@
     }
 }
 
+- (IBAction)showPlayListDetial:(id)sender {
+    [self performSegueWithIdentifier:@"showPlaylistDetail" sender:sender];
+}
 @end

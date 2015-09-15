@@ -17,38 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-No-J5d">
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-No-J5d">
                                 <rect key="frame" x="60" y="184" width="200" height="200"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="gPP-fh-W0G"/>
                                     <constraint firstAttribute="height" constant="200" id="jan-tp-6Yp"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fta-3y-uFO">
-                                <rect key="frame" x="137" y="392" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
-                                    <segue destination="d6h-dX-XEL" kind="push" identifier="showPlaylistDetail" id="nMU-WO-m7L"/>
+                                    <outletCollection property="gestureRecognizers" destination="Atx-yA-jKu" appends="YES" id="fyc-8q-XsV"/>
                                 </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Fta-3y-uFO" firstAttribute="top" secondItem="1xK-No-J5d" secondAttribute="bottom" constant="8" id="2ns-8g-sFs"/>
                             <constraint firstAttribute="centerY" secondItem="1xK-No-J5d" secondAttribute="centerY" id="Dek-Wx-saw"/>
-                            <constraint firstAttribute="centerX" secondItem="Fta-3y-uFO" secondAttribute="centerX" id="kDr-oh-ZYM"/>
                             <constraint firstAttribute="centerX" secondItem="1xK-No-J5d" secondAttribute="centerX" id="wRR-nO-8HU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlist" id="bXt-CV-6Ox"/>
                     <connections>
                         <outlet property="playListImageVeiw0" destination="1xK-No-J5d" id="28G-48-wwi"/>
+                        <segue destination="d6h-dX-XEL" kind="push" identifier="showPlaylistDetail" id="aWp-pi-PAs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Atx-yA-jKu">
+                    <connections>
+                        <action selector="showPlayListDetial:" destination="vXZ-lx-hvc" id="PcT-qQ-27d"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="734" y="319"/>
         </scene>
