@@ -39,8 +39,20 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:@"showPlaylistDetail"]) {
-        PlaylistDetailViewController *playlistDetailController = (PlaylistDetailViewController*)segue.destinationViewController;
-        playlistDetailController.playlist = [[Playlist alloc]initWithIndex:0];
+        
+        //create UI Image View object to hold sender object which user just tape the image
+        UIImageView *playListImageView = (UIImageView *)[sender view];
+        
+        //check if the playListImagesView has the object that we just tape
+        if ([self.playListImageViews containsObject:playListImageView]) {
+            //if the sender object existed, we will get the index of that object
+            NSInteger index = [self.playListImageViews indexOfObject:playListImageView];
+            
+            //put the index down to here
+            PlaylistDetailViewController *playlistDetailController = (PlaylistDetailViewController*)segue.destinationViewController;
+            playlistDetailController.playlist = [[Playlist alloc]initWithIndex:index];
+        }
+        
     }
 }
 
