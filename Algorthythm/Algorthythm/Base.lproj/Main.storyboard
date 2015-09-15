@@ -97,18 +97,58 @@
                                     <constraint firstItem="No5-Q3-yOG" firstAttribute="leading" secondItem="GK1-lj-XJb" secondAttribute="leading" constant="20" id="yaL-d7-Axx"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0x-Mg-wcV">
+                                <rect key="frame" x="20" y="374" width="46" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artists Number 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSm-DS-DPn">
+                                <rect key="frame" x="20" y="407" width="106" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artists Number 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-Xk-nZE">
+                                <rect key="frame" x="20" y="432" width="106" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artists Number 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9u-4v-p0r">
+                                <rect key="frame" x="20" y="457" width="106" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="oSm-DS-DPn" firstAttribute="top" secondItem="s0x-Mg-wcV" secondAttribute="bottom" constant="12" id="7kF-Gy-Hui"/>
                             <constraint firstItem="lTB-0s-rKv" firstAttribute="leading" secondItem="KI9-Ad-NB8" secondAttribute="leading" id="9WZ-xK-tM7"/>
+                            <constraint firstItem="oSm-DS-DPn" firstAttribute="leading" secondItem="KI9-Ad-NB8" secondAttribute="leading" constant="20" id="9gh-p2-mWk"/>
+                            <constraint firstItem="e9u-4v-p0r" firstAttribute="leading" secondItem="KI9-Ad-NB8" secondAttribute="leading" constant="20" id="DYr-Wx-4Hj"/>
+                            <constraint firstItem="VK7-Xk-nZE" firstAttribute="top" secondItem="oSm-DS-DPn" secondAttribute="bottom" constant="8" id="Edc-Nt-8HD"/>
+                            <constraint firstItem="VK7-Xk-nZE" firstAttribute="leading" secondItem="KI9-Ad-NB8" secondAttribute="leading" constant="20" id="GyK-fZ-XTV"/>
                             <constraint firstItem="GK1-lj-XJb" firstAttribute="bottom" secondItem="lTB-0s-rKv" secondAttribute="bottom" id="LLq-Yo-wLu"/>
                             <constraint firstItem="lTB-0s-rKv" firstAttribute="top" secondItem="bPh-3A-81e" secondAttribute="bottom" id="Ljh-Bj-Ndb"/>
+                            <constraint firstItem="e9u-4v-p0r" firstAttribute="top" secondItem="VK7-Xk-nZE" secondAttribute="bottom" constant="8" id="Tx0-UV-Y4Y"/>
                             <constraint firstAttribute="trailing" secondItem="lTB-0s-rKv" secondAttribute="trailing" id="VlW-er-NdF"/>
+                            <constraint firstItem="s0x-Mg-wcV" firstAttribute="leading" secondItem="KI9-Ad-NB8" secondAttribute="leading" constant="20" id="ZTo-MW-T9X"/>
                             <constraint firstAttribute="trailing" secondItem="GK1-lj-XJb" secondAttribute="trailing" id="j1D-FJ-id7"/>
                             <constraint firstItem="GK1-lj-XJb" firstAttribute="leading" secondItem="KI9-Ad-NB8" secondAttribute="leading" id="nJD-eQ-cIQ"/>
+                            <constraint firstItem="s0x-Mg-wcV" firstAttribute="top" secondItem="GK1-lj-XJb" secondAttribute="bottom" constant="20" id="tgU-qn-tZn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artists" id="ppU-U7-Yfq"/>
+                    <connections>
+                        <outlet property="playListArtists0" destination="oSm-DS-DPn" id="utK-8V-5bM"/>
+                        <outlet property="playListArtists1" destination="VK7-Xk-nZE" id="1KL-QP-b28"/>
+                        <outlet property="playListArtists2" destination="e9u-4v-p0r" id="6YI-BK-nR1"/>
+                        <outlet property="playListCoverImage" destination="lTB-0s-rKv" id="vTa-4F-LpP"/>
+                        <outlet property="playListDescription" destination="No5-Q3-yOG" id="imV-91-enH"/>
+                        <outlet property="playListTitle" destination="gYq-c7-QcI" id="NBU-DW-xTl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evo-lz-vOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

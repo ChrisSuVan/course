@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Playlist.h"
+@class Playlist;
 
 @interface PlaylistDetailViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *playListCoverImage;
+@property (weak, nonatomic) IBOutlet UILabel *playListTitle;
+@property (weak, nonatomic) IBOutlet UILabel *playListDescription;
+@property (weak, nonatomic) IBOutlet UILabel *playListArtists0;
+@property (weak, nonatomic) IBOutlet UILabel *playListArtists1;
+@property (weak, nonatomic) IBOutlet UILabel *playListArtists2;
 @property (strong,nonatomic)Playlist* playlist;
 @end
