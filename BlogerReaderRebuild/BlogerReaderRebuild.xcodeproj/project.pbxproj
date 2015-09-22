@@ -14,6 +14,7 @@
 		878450821BAE5D2E0033E2BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878450801BAE5D2E0033E2BD /* LaunchScreen.xib */; };
 		8784508E1BAE5D2E0033E2BD /* BlogerReaderRebuildTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8784508D1BAE5D2E0033E2BD /* BlogerReaderRebuildTests.m */; };
 		878450991BAE6A3A0033E2BD /* TableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878450981BAE6A3A0033E2BD /* TableTableViewController.m */; };
+		87EBFEDF1BB1278900D70F5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87EBFEDE1BB1278900D70F5B /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8784508D1BAE5D2E0033E2BD /* BlogerReaderRebuildTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogerReaderRebuildTests.m; sourceTree = "<group>"; };
 		878450971BAE6A3A0033E2BD /* TableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTableViewController.h; sourceTree = "<group>"; };
 		878450981BAE6A3A0033E2BD /* TableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTableViewController.m; sourceTree = "<group>"; };
+		87EBFEDE1BB1278900D70F5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		878450651BAE5D2E0033E2BD = {
 			isa = PBXGroup;
 			children = (
+				87EBFEDE1BB1278900D70F5B /* Default-568h@2x.png */,
 				878450701BAE5D2E0033E2BD /* BlogerReaderRebuild */,
 				8784508A1BAE5D2E0033E2BD /* BlogerReaderRebuildTests */,
 				8784506F1BAE5D2E0033E2BD /* Products */,
@@ -163,7 +166,7 @@
 		878450661BAE5D2E0033E2BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jian Su";
 				TargetAttributes = {
 					8784506D1BAE5D2E0033E2BD = {
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8784507D1BAE5D2E0033E2BD /* Main.storyboard in Resources */,
+				87EBFEDF1BB1278900D70F5B /* Default-568h@2x.png in Resources */,
 				878450821BAE5D2E0033E2BD /* LaunchScreen.xib in Resources */,
 				8784507F1BAE5D2E0033E2BD /* Images.xcassets in Resources */,
 			);
@@ -284,6 +288,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -349,6 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BlogerReaderRebuild/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.xzerox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,6 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BlogerReaderRebuild/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.xzerox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -377,6 +384,7 @@
 				);
 				INFOPLIST_FILE = BlogerReaderRebuildTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.xzerox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlogerReaderRebuild.app/BlogerReaderRebuild";
 			};
@@ -392,6 +400,7 @@
 				);
 				INFOPLIST_FILE = BlogerReaderRebuildTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.xzerox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlogerReaderRebuild.app/BlogerReaderRebuild";
 			};

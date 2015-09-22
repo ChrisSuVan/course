@@ -17,53 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *blogPost1 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"The missing Widget in C++", @"title",
-                               @"Ben Jakuben",@"author",nil];
+    //Point to a URL
+    NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary"];
     
-    NSDictionary *blogPost2 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"getting started with java", @"title",
-                               @"Tim vancer",@"author",nil];
+    //Download URL data
+    NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
     
-    NSDictionary *blogPost3 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"the javaScript good parts", @"title",
-                               @"Dacker cork",@"author",nil];
+    //Create NS Error
+    NSError *error = nil;
     
-    NSDictionary *blogPost4 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"Mysql how to normalized table", @"title",
-                               @"Chris Su",@"author",nil];
+    //convert json steam into dictionary
+    NSDictionary *dataDictionay = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-    NSDictionary *blogPost5 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"stucture of HTML", @"title",
-                               @"Some dude",@"author",nil];
-    
-    NSDictionary *blogPost6 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"CSS3 meida query", @"title",
-                               @"Chris Su",@"author",nil];
-    
-    NSDictionary *blogPost7 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"node.js the none blocking server side lanague", @"title",
-                               @"Chris Su",@"author",nil];
-    
-    NSDictionary *blogPost8 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"PHP FrameWork laravel 5.1", @"title",
-                               @"Chris Su",@"author",nil];
-    
-    NSDictionary *blogPost9 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"The Linux command lines", @"title",
-                               @"Chris Su",@"author",nil];
-    
-    self.blogPosts = [NSArray arrayWithObjects:
-                      blogPost1,
-                      blogPost2,
-                      blogPost3,
-                      blogPost4,
-                      blogPost5,
-                      blogPost6,
-                      blogPost7,
-                      blogPost8,
-                      blogPost9,
-                      nil];
+    self.blogPosts = [dataDictionay objectForKey:@"posts"];
 }
 
 - (void)didReceiveMemoryWarning {
