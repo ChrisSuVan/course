@@ -7,6 +7,7 @@
 //
 
 #import "TableTableViewController.h"
+#import "BlogPost.h"
 
 @interface TableTableViewController ()
 
@@ -16,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Set this to avoid table view up against with the status bar
+    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
     
     //Point to a URL
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary"];
@@ -29,7 +33,16 @@
     //convert json steam into dictionary
     NSDictionary *dataDictionay = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-    self.blogPosts = [dataDictionay objectForKey:@"posts"];
+    NSArray* blogPostArray = [dataDictionay objectForKey:@"posts"];
+    
+    //create a blogPost array to holde dictionay data
+    self.blogPosts = [NSMutableArray array];
+    
+    for (NSDictionary *bpDictionary in blogPostArray) {
+        BlogPost* blogPost = [BlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
+        blogPost.author = [bpDictionary objectForKey:@"author"];
+        [self.blogPosts addObject:blogPost];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,9 +70,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
-    cell.textLabel.text = [blogPost valueForKey:@"title"];
-    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
+    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    cell.textLabel.text = blogPost.title;
+    cell.detailTextLabel.text = blogPost.author;
     
     return cell;
 }

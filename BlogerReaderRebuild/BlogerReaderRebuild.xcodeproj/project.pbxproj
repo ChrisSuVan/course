@@ -14,6 +14,7 @@
 		878450821BAE5D2E0033E2BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878450801BAE5D2E0033E2BD /* LaunchScreen.xib */; };
 		8784508E1BAE5D2E0033E2BD /* BlogerReaderRebuildTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8784508D1BAE5D2E0033E2BD /* BlogerReaderRebuildTests.m */; };
 		878450991BAE6A3A0033E2BD /* TableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878450981BAE6A3A0033E2BD /* TableTableViewController.m */; };
+		87E73E241BB1F4C700C09105 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E73E231BB1F4C700C09105 /* BlogPost.m */; settings = {ASSET_TAGS = (); }; };
 		87EBFEDF1BB1278900D70F5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87EBFEDE1BB1278900D70F5B /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		8784508D1BAE5D2E0033E2BD /* BlogerReaderRebuildTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogerReaderRebuildTests.m; sourceTree = "<group>"; };
 		878450971BAE6A3A0033E2BD /* TableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTableViewController.h; sourceTree = "<group>"; };
 		878450981BAE6A3A0033E2BD /* TableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTableViewController.m; sourceTree = "<group>"; };
+		87E73E221BB1F4C700C09105 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
+		87E73E231BB1F4C700C09105 /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 		87EBFEDE1BB1278900D70F5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +91,8 @@
 				878450761BAE5D2E0033E2BD /* AppDelegate.m */,
 				878450971BAE6A3A0033E2BD /* TableTableViewController.h */,
 				878450981BAE6A3A0033E2BD /* TableTableViewController.m */,
+				87E73E221BB1F4C700C09105 /* BlogPost.h */,
+				87E73E231BB1F4C700C09105 /* BlogPost.m */,
 				8784507B1BAE5D2E0033E2BD /* Main.storyboard */,
 				8784507E1BAE5D2E0033E2BD /* Images.xcassets */,
 				878450801BAE5D2E0033E2BD /* LaunchScreen.xib */,
@@ -226,6 +231,7 @@
 				878450991BAE6A3A0033E2BD /* TableTableViewController.m in Sources */,
 				878450771BAE5D2E0033E2BD /* AppDelegate.m in Sources */,
 				878450741BAE5D2E0033E2BD /* main.m in Sources */,
+				87E73E241BB1F4C700C09105 /* BlogPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
