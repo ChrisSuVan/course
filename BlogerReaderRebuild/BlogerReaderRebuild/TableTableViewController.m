@@ -41,6 +41,7 @@
     for (NSDictionary *bpDictionary in blogPostArray) {
         BlogPost* blogPost = [BlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
         blogPost.author = [bpDictionary objectForKey:@"author"];
+        blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
         [self.blogPosts addObject:blogPost];
     }
 }
@@ -71,6 +72,21 @@
     
     // Configure the cell...
     BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    
+    //checke the class type
+    if([blogPost.thumbnail isKindOfClass:[NSString class]]) {
+        
+        //download the image from the internet
+        NSData* imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
+        UIImage* image = [UIImage imageWithData:imageData];
+        
+        //add image to the blog
+        cell.imageView.image = image;
+    } else {
+        //Display default image
+        cell.imageView.image = [UIImage imageNamed:@"Tree_House.png"];
+    }
+    
     cell.textLabel.text = blogPost.title;
     cell.detailTextLabel.text = blogPost.author;
     

@@ -12,9 +12,10 @@
 
 @property(strong,nonatomic)NSString* title;
 @property(strong,nonatomic)NSString* author;
+@property(strong,nonatomic)NSString* thumbnail;
 
 //Designated initializer
 -(instancetype)initWithTitle:(NSString*)title;
 +(instancetype)blogPostWithTitle:(NSString*)title;
-
+-(NSURL *) thumbnailURL;
 @end

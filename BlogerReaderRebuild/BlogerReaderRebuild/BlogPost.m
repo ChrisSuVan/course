@@ -15,6 +15,9 @@
     
     if (self) {
         self.title = title;
+        //if we cannot access the thumbnail over the internet, we set it nil
+        self.thumbnail = nil;
+        self.author = nil;
     }
     
     return self;
@@ -24,4 +27,9 @@
     return [[self alloc]initWithTitle:title];
 }
 
+-(NSURL *)thumbnailURL{
+    
+    return [NSURL URLWithString:self.thumbnail];
+    
+}
 @end
