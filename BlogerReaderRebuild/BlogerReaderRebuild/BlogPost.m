@@ -32,4 +32,21 @@
     return [NSURL URLWithString:self.thumbnail];
     
 }
+
+-(NSString *)formattedDate {
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
+    
+    //set the Date Format  same as the Json format
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    //convert the property of date (NSSting) to NSDate type
+    NSDate* TempDate = [dateFormatter dateFromString:self.date];
+    
+    //now we set the date format that we want
+    [dateFormatter setDateFormat:@"EE MMM, dd"];
+    
+    //return that as NSString
+    return [dateFormatter stringFromDate:TempDate];
+}
+
 @end
